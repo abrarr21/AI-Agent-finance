@@ -81,6 +81,7 @@ const callAgent = async () => {
                 const completion = await groq.chat.completions.create({
                     messages: msg,
                     model: "llama-3.3-70b-versatile",
+                    temperature: 0.3,
                     tools: [
                         {
                             type: "function",
