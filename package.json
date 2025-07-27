@@ -4,17 +4,20 @@
     "type": "module",
     "private": true,
     "scripts": {
-        "dev": "bun run index.ts",
-        "build": "bun build index.ts --outdir=dist --target=node",
+        "dev": "bun run src/index.ts",
+        "build": "bun build src/index.ts --outdir=dist --target=node",
         "start": "bun run dist/index.js"
     },
     "devDependencies": {
-        "@types/bun": "latest"
+        "@types/bun": "latest",
+        "@types/node": "^24.1.0",
+        "@types/uuid": "^10.0.0"
     },
     "peerDependencies": {
         "typescript": "^5"
     },
     "dependencies": {
-        "groq-sdk": "^0.27.0"
+        "groq-sdk": "^0.27.0",
+        "uuid": "^11.1.0"
     }
 }
